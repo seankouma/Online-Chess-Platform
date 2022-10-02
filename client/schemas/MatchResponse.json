@@ -1,0 +1,19 @@
+{
+    "$id": "https://example.com/address.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "match",
+    "description": "Get all match records for user",
+    "type": "object",
+    "properties": {
+      "info": {
+        "description": "the object type should be string",
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    },
+    "required":["info"],
+    "additionalProperties": true
+  }
+  

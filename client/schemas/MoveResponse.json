@@ -1,0 +1,17 @@
+{
+    "$id": "https://example.com/address.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "move",
+    "description": "move response",
+    "type": "object",
+    "properties": {
+      "validMove": {
+        "description": "Whether the piece is able to be moved from its current position to a new position",
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "validMove"
+    ],
+    "additionalProperties": true
+  }

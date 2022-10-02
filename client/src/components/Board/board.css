@@ -1,0 +1,87 @@
+.chessboard {
+  width: 640px;
+  height: 640px;
+  margin: 20px;
+  /* border: 25px solid #333; */
+}
+.black {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background-color: #999;
+  font-size:30px;
+  text-align:center;
+  display: table-cell;
+  vertical-align:middle;
+}
+.dark-black {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  font-size:30px;
+  text-align:center;
+  display: table-cell;
+  vertical-align:middle;
+}
+.white {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  font-size:30px;
+  text-align:center;
+  display: table-cell;
+  vertical-align:middle;
+}
+.whiteRook::before {
+  content: '\2656';
+}
+.blackRook::before {
+  content: '\265C';
+}
+.blackKnight::before {
+  content: '\265E';
+}
+.whiteKnight::before {
+  content: '\2658';
+}
+.blackKing::before {
+  content: '\265A';
+}
+.whiteKing::before {
+  content: '\2654';
+}
+.blackQueen::before {
+  content: '\265B';
+}
+
+.whiteQueen::before {
+  content: '\2655';
+}
+.blackChampion::before {
+  content: '\23FE';
+}
+.whiteChampion::before {
+  /* content: '\23FE'; */
+  color: black;
+  background-color: white;
+}
+.blackWizard::before {
+  content: '\1F319';
+}
+.whiteWizard::before {
+  content: '\263D';
+}
+.blackBishop::before {
+  content: '\265D';
+}
+.whiteBishop::before {
+  content: '\2657';
+}
+.blackPawn::before {
+  content: '\265F';
+}
+.whitePawn::before {
+  content: '\2659';
+}

@@ -1,0 +1,16 @@
+{
+    "$id": "https://example.com/address.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "move",
+    "description": "Move object used for POST request",
+    "type": "object",
+    "properties": {
+      "boardID": {
+        "description": "the object type should be move",
+        "type": "integer"
+      }
+    },
+    "required":["boardID"],
+    "additionalProperties": true
+  }
+  

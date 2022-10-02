@@ -1,0 +1,16 @@
+{
+  "$id": "https://example.com/address.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "invitations",
+  "description": "Return all invitation records",
+  "type": "object",
+  "properties": {
+    "requestType": {
+      "description": "the object type should be invitations",
+      "type": "string",
+      "pattern": "^invitations$"
+    }
+  },
+  "required":["requestType"],
+  "additionalProperties": true
+}

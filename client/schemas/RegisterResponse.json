@@ -1,0 +1,16 @@
+{
+    "$id": "https://example.com/address.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "register",
+    "description": "register response",
+    "type": "object",
+    "properties": {
+      "success": {
+        "description":"Whether the credentials were able to be registered in the db",
+        "type":"boolean"
+      }
+    },
+    "required":["success"],
+    "additionalProperties": true
+  }
+  

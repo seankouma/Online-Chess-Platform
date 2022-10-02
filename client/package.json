@@ -1,0 +1,97 @@
+{
+  "scripts": {
+    "test": "jest --coverageDirectory=${BUILD_DIRECTORY_PREFIX}/target/coverage/client/",
+    "postman": "newman run ../server/src/test/postman/314-api-tests.postman_collection.json",
+    "devClient": "webpack-dev-server -d --env.CLIENT_PORT=3000 --env.SERVER_PORT=8000 --env.CLIENT_LOG_LEVEL=INFO --env.BUILD_DIRECTORY_PREFIX=$BUILD_DIRECTORY_PREFIX",
+    "prodClient": "webpack -p --env.CLIENT_LOG_LEVEL=ERROR --env.BUILD_DIRECTORY_PREFIX=$BUILD_DIRECTORY_PREFIX",
+    "devServer": "java -Dorg.slf4j.simpleLogger.log.com.tco=info -jar -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 $BUILD_DIRECTORY_PREFIX/target/server-local.jar 8000",
+    "server": "java -Dorg.slf4j.simpleLogger.log.com.tco=info -jar $BUILD_DIRECTORY_PREFIX/target/server-local.jar 8000",
+    "dev": "concurrently \"npm run devServer\" \"npm run devClient\""
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-regular-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "@material-ui/core": "^4.9.14",
+    "ajv": "^6.12.2",
+    "bootstrap": "^4.5.0",
+    "leaflet": "^1.6.0",
+    "newman": "^5.1.2",
+    "node-sass": "^4.14.1",
+    "notistack": "1.0.10",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-leaflet": "^2.7.0",
+    "react-leaflet-control": "^2.1.2",
+    "react-router-dom": "^5.3.0",
+    "reactstrap": "^8.4.1",
+    "ulog": "^1.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.6",
+    "@babel/plugin-transform-async-to-generator": "^7.8.3",
+    "@babel/plugin-transform-object-assign": "^7.8.3",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/runtime": "^7.9.6",
+    "@babel/standalone": "^7.9.6",
+    "@jest/globals": "^26.6.2",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "11.2.6",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@testing-library/user-event": "^13.2.1",
+    "autoprefixer": "^9.7.6",
+    "babel-jest": "^26.0.1",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^5.2.0",
+    "core-js": "^3.8.2",
+    "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "5.3.2",
+    "jest": "^26.0.1",
+    "jest-cli": "^26.0.1",
+    "jest-fetch-mock": "^3.0.3",
+    "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0",
+    "react-icons": "^4.2.0",
+    "regenerator-runtime": "^0.13.5",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "5.51.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/**.{js,jsx}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/coverage/*",
+      "/dist/*",
+      "/node_modules/*",
+      "/schemas/*",
+      "/templates/*",
+      "/test/*",
+      "/webpack.config.js"
+    ],
+    "testURL": "http://localhost/",
+    "moduleNameMapper": {
+      "^.+\\.(png|svg|gif|jpg|jpeg)$": "<rootDir>/test/jestConfig/require_stub.js",
+      "^.+\\.(css|scss)$": "<rootDir>/test/jestConfig/require_stub.js"
+    },
+    "automock": false,
+    "setupFiles": [
+      "<rootDir>/test/jestConfig/setupJest.js"
+    ],
+    "transform": {
+      "^.+\\.jsx$": "babel-jest",
+      "^.+\\.js$": "babel-jest"
+    }
+  }
+}
