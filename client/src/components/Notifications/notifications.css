@@ -1,0 +1,30 @@
+th {
+    text-align: center;
+}
+.show {
+    margin-top: 1rem;
+}
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+.searchResult {
+    text-align: left;
+    border: black ridge 1px;
+    border-radius: 10px;
+    margin: 3px;
+    width: 20rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    height: 50px;
+}
+.invite-btn {
+    float: right;
+    padding: 2px;
+}

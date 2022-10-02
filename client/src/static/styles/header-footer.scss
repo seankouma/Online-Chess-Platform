@@ -1,0 +1,69 @@
+$header-height: 12vh;
+$footer-height: 6vh;
+$map-top: $header-height + 2.5vh;
+$scrollbar-width: calc(100vw - 100%);
+
+// Background of Header / Footer
+
+.full-width {
+    width: 100%;
+
+    background-color: $primary;
+    color: #FFFFFF;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Body Styles
+
+.body {
+    padding-left: $scrollbar-width;
+    margin-top: $map-top;
+    margin-bottom: $footer-height;
+    position: relative;
+    z-index: 1;
+}
+
+// Header Styles
+
+.header {
+    position: fixed;
+    padding-left: $scrollbar-width;
+    top: 0;
+    height: $header-height;
+    z-index: 2;
+}
+
+.tco-logo {
+    width: 80px;
+    height: auto;
+    margin-right: 25px;
+}
+
+// Footer Styles
+
+.footer {
+    position: fixed;
+    padding-left: $scrollbar-width;
+    bottom: 0;
+    height: $footer-height;
+    z-index: 2;
+}
+
+.centered {
+    margin: 0 auto;
+    text-align: center;
+}
+
+// Screen Width Intervals (Aligned with Bootstrap)
+
+@media only screen and (min-width: 576px) {
+
+    // Footer Centering at Small Screen Sizes
+
+    .centered {
+        margin: 0;
+        text-align: unset;
+    }
+}

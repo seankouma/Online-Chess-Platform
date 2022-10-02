@@ -1,0 +1,17 @@
+{
+    "$id": "https://example.com/address.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "login",
+    "description": "Login object used for POST request",
+    "type": "object",
+    "properties": {
+      "requestType": {
+        "description": "the object type should be login",
+        "type": "string",
+        "pattern": "^login$"
+      }
+    },
+    "required":["requestType"],
+    "additionalProperties": true
+  }
+  

@@ -1,0 +1,17 @@
+{
+  "$id": "https://example.com/address.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "login",
+  "description": "login response",
+  "type": "object",
+  "properties": {
+    "requestType": {
+      "description": "Whether the credentials were able to be fetched from the database",
+      "type": "string"
+    }
+  },
+  "required": [
+    "requestType"
+  ],
+  "additionalProperties": true
+}
